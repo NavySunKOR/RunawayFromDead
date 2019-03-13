@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pickable
+  - HandgunPickable
+  - M416Pickable
+  - ShotgunPickable
+  - MagnumPickable
+  - HandgunAmmoPickable
+  - M416AmmoPickable
+  - MagnumAmmoPickable
+  - ShotgunAmmoPickable
+  - Leg
+  - Arm
+  - Body
+  - Head
+  - Punch
+  - Key
+  - GameManager
+  - Door
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - Gun
+  - Pickable
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

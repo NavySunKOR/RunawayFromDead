@@ -3,6 +3,9 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+RunawayFromDead/Assets/AssetsUsed
+RunawayFromDead/Assets/Standard Assets
+RunawayFromDead/Assets/SampleScenes
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
