@@ -85,9 +85,15 @@ public class AIStatus : MonoBehaviour {
 
                 if(isSpotted)
                 {
+                    attackTimer += Time.deltaTime;
+
                     if (Vector3.Distance(transform.position, playerTr.position) < attackRange)
                     {
-                        Attack();
+                        if(attackTimer > attackInterval)
+                        {
+                            attackTimer = 0f;
+                            Attack();
+                        }
                     }
                     else
                     {

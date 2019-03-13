@@ -31,6 +31,7 @@ public class FirstPersonCamera : MonoBehaviour {
     private void Start()
     {
         canControl = true;
+        rotation = new Vector3(0, 0, 0);
     }
 
 
@@ -48,7 +49,8 @@ public class FirstPersonCamera : MonoBehaviour {
             vertical = underAngleLimit;
         }
 
-        rotation = new Vector3(vertical, horizontal, 0);
+        rotation.x = vertical;
+        rotation.y = horizontal;
         cameraTr.rotation = Quaternion.Euler(rotation);
         transform.forward = cameraTr.forward;
     }

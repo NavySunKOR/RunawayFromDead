@@ -34,6 +34,7 @@ public class FirstPersonController : MonoBehaviour {
 
 
     private const float SROOT2 = 1.4f;
+    private const float NORMAL = 1.0f;
 
     private AudioSource audioSource;
     private CharacterController cc;
@@ -142,7 +143,7 @@ public class FirstPersonController : MonoBehaviour {
 
     private void Moving()
     {
-        float squareRoot = (verticalMove != 0 && horizontalMove != 0)? 1.4f : 1f;
+        float squareRoot = (verticalMove != 0 && horizontalMove != 0)? SROOT2 : NORMAL;
         
         if (isRunning)
         {
