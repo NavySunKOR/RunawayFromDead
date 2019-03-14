@@ -69,7 +69,7 @@ public class AIStatus : MonoBehaviour {
         isOver = false;
         health = 100;
         spotRange = 7f;
-        attackRange = 2f;
+        attackRange = 1f;
     }
 	
 	// Update is called once per frame

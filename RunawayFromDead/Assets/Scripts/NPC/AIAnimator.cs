@@ -10,13 +10,13 @@ public class AIAnimator : MonoBehaviour {
     public AudioClip[] attackClips;
     public AudioClip[] tookHitClips;
     public AudioClip[] deadClips;
-
+    
     private AudioSource audioSource;
     private AIStatus aiStatus;
     private Animator animator;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         animator = GetComponent<Animator>();
         aiStatus = GetComponent<AIStatus>();
         audioSource = GetComponent<AudioSource>();
@@ -28,7 +28,7 @@ public class AIAnimator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(aiStatus.IsDead)
+        if (aiStatus.IsDead)
         {
             int random = Random.Range(0, deadClips.Length);
             audioSource.clip = deadClips[random];
@@ -75,4 +75,5 @@ public class AIAnimator : MonoBehaviour {
         audioSource.PlayOneShot(tookHitClips[random]);
         animator.SetTrigger("hitTrigger2");
     }
+    
 }

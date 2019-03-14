@@ -15,6 +15,7 @@ public class PlayerUIController : MonoBehaviour {
     public GameObject gameClearPanel;
     public GameObject hitPanel;
     public GameObject[] buttons;
+    public Text frameText;
 
     private GameManager gameManager;
     private PlayerStats status;
@@ -29,9 +30,10 @@ public class PlayerUIController : MonoBehaviour {
         Time.timeScale = 1;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(status.IsAlive && !gameManager.IsGameCleared)
+        frameText.text = (Mathf.Floor(Time.frameCount / Time.time)).ToString();
+        if (status.IsAlive && !gameManager.IsGameCleared)
         {
             UpdatingHealthBar();
             if (InputManager.GetKeyDown(InputNames.openInventory))

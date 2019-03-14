@@ -42,7 +42,6 @@ public class WeaponController : MonoBehaviour {
     // Update is called once per frame
     private void Update () {
         CheckFireReady();
-        Debug.DrawLine(firePos.position, firePos.forward * 100f);
         if (fireReady && !gunAnimation.reloadingState)
         {
             if(InputManager.GetKey(InputNames.fire))
