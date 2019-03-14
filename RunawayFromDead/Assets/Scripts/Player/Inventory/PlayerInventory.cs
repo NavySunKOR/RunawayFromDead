@@ -272,13 +272,9 @@ public class PlayerInventory : MonoBehaviour {
 
     //Items
 
-    private void DiscardItem(int index, int amount)
+    public void DiscardItem(int index)
     {
-        inventory[index].amount -= amount;
-        if(inventory[index].amount <= 0)
-        {
-            inventory[index].type = ItemType.None;
-        }
+        inventory[index].type = ItemType.None;
     }
         
     private void UseItem(int index,int amount)

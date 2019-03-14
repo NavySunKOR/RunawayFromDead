@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 222627063808501082}
   - component: {fileID: 114157948192672906}
   - component: {fileID: 114703585617793114}
+  - component: {fileID: 114533976167641768}
   m_Layer: 5
   m_Name: HandgunAmmo
   m_TagString: Untagged
@@ -123,6 +124,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114533976167641768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573102037808790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2d5f8a0a719ce449ebd16071904dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!114 &114703585617793114
 MonoBehaviour:
   m_ObjectHideFlags: 1

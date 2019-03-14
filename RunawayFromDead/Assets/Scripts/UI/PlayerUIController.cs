@@ -82,34 +82,50 @@ public class PlayerUIController : MonoBehaviour {
                 Destroy(tr.gameObject);
         }
 
-        foreach (Item item in playerInventory.inventory)
+        for (int i = 0; i < playerInventory.inventory.Length; i++)
         {
-            switch (item.type)
+            switch (playerInventory.inventory[i].type)
             {
-                case ItemType.Handgun: Instantiate(buttons[0], inventoryInnerPanel.transform);
+                case ItemType.Handgun:
+                    GameObject handgunObj = Instantiate(buttons[0], inventoryInnerPanel.transform);
+                    handgunObj.GetComponent<ButtonEvent>().index = i;
                     break;
                 case ItemType.HandgunAmmo:
                     GameObject handgunAmmoObj = Instantiate(buttons[1], inventoryInnerPanel.transform);
-                    handgunAmmoObj.transform.Find("AmountText").GetComponent<Text>().text = item.amount.ToString();
+                    handgunAmmoObj.transform.Find("AmountText").GetComponent<Text>().text = playerInventory.inventory[i].amount.ToString();
+                    handgunAmmoObj.GetComponent<ButtonEvent>().index = i;
                     break;
-                case ItemType.M416: Instantiate(buttons[2], inventoryInnerPanel.transform); break;
+                case ItemType.M416:
+                    GameObject m416Obj = Instantiate(buttons[2], inventoryInnerPanel.transform);
+                    m416Obj.GetComponent<ButtonEvent>().index = i;
+                    break;
                 case ItemType.M416Ammo:
                     GameObject m416AmmoObj = Instantiate(buttons[3], inventoryInnerPanel.transform);
-                    m416AmmoObj.transform.Find("AmountText").GetComponent<Text>().text = item.amount.ToString();
+                    m416AmmoObj.transform.Find("AmountText").GetComponent<Text>().text = playerInventory.inventory[i].amount.ToString();
+                    m416AmmoObj.GetComponent<ButtonEvent>().index = i;
                     break;
-                case ItemType.Shotgun: Instantiate(buttons[4], inventoryInnerPanel.transform); break;
+                case ItemType.Shotgun:
+                    GameObject shotgunObj = Instantiate(buttons[4], inventoryInnerPanel.transform);
+                    shotgunObj.GetComponent<ButtonEvent>().index = i;
+                    break;
                 case ItemType.ShotgunAmmo:
                     GameObject shotgunAmmoObj = Instantiate(buttons[5], inventoryInnerPanel.transform);
-                    shotgunAmmoObj.transform.Find("AmountText").GetComponent<Text>().text = item.amount.ToString();
+                    shotgunAmmoObj.transform.Find("AmountText").GetComponent<Text>().text = playerInventory.inventory[i].amount.ToString();
+                    shotgunAmmoObj.GetComponent<ButtonEvent>().index = i;
                     break;
-                case ItemType.Magnum: Instantiate(buttons[6], inventoryInnerPanel.transform); break;
+                case ItemType.Magnum:
+                    GameObject magnumObj = Instantiate(buttons[6], inventoryInnerPanel.transform);
+                    magnumObj.GetComponent<ButtonEvent>().index = i;
+                    break;
                 case ItemType.MagnumAmmo:
                     GameObject magnumAmmoObj = Instantiate(buttons[7], inventoryInnerPanel.transform);
-                    magnumAmmoObj.transform.Find("AmountText").GetComponent<Text>().text = item.amount.ToString();
+                    magnumAmmoObj.transform.Find("AmountText").GetComponent<Text>().text = playerInventory.inventory[i].amount.ToString();
+                    magnumAmmoObj.GetComponent<ButtonEvent>().index = i;
                     break;
                 case ItemType.Health:
                     GameObject healthObj = Instantiate(buttons[8], inventoryInnerPanel.transform);
-                    healthObj.transform.Find("AmountText").GetComponent<Text>().text = item.amount.ToString();
+                    healthObj.transform.Find("AmountText").GetComponent<Text>().text = playerInventory.inventory[i].amount.ToString();
+                    healthObj.GetComponent<ButtonEvent>().index = i;
                     break;
                 default: break;
             }

@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222256268482646182}
   - component: {fileID: 114145507030252132}
   - component: {fileID: 114034093150577450}
+  - component: {fileID: 114815312973224700}
   m_Layer: 5
   m_Name: MagnumAmmo
   m_TagString: Untagged
@@ -197,6 +198,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114815312973224700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731071430059430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2d5f8a0a719ce449ebd16071904dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!222 &222162696741869136
 CanvasRenderer:
   m_ObjectHideFlags: 1
