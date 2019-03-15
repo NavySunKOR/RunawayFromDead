@@ -17,10 +17,19 @@ public class PlayerUIController : MonoBehaviour {
     public GameObject[] buttons;
     public Text frameText;
     public RectTransform deleteReticleTr;
+    public bool IsPaused
+    {
+        get
+        {
+            return isPaused;
+        }
+    }
+
 
     private GameManager gameManager;
     private PlayerStats status;
     private PlayerInventory playerInventory;
+    private bool isPaused;
 
     private void Start()
     {
@@ -28,6 +37,7 @@ public class PlayerUIController : MonoBehaviour {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         playerInventory = GetComponent<PlayerInventory>();
         OnOFFCrossHair();
+        isPaused = false;
         Time.timeScale = 1;
     }
 
@@ -166,6 +176,7 @@ public class PlayerUIController : MonoBehaviour {
 
     public void OnOFFCrossHair()
     {
+        isPaused = !isPaused;
         Cursor.lockState = (Cursor.lockState == CursorLockMode.Locked) ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = (Cursor.visible) ? false : true;
     }

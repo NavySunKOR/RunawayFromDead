@@ -15,6 +15,7 @@ public class WeaponController : MonoBehaviour {
     private PlayerInventory playerInventory;
     private int ammosToReload;
     private FirstPersonController status;
+    private PlayerUIController playerUIController;
 
     // Use this for initialization
     private void Start () {
@@ -25,6 +26,7 @@ public class WeaponController : MonoBehaviour {
         gunAnimation = GetComponent<WeaponAnimation>();
         ammosToReload = 0;
         status = GetComponentInParent<FirstPersonController>();
+        playerUIController = GetComponentInParent<PlayerUIController>();
 
     }
 
@@ -81,7 +83,7 @@ public class WeaponController : MonoBehaviour {
 
     private void CheckFireReady()
     {
-        fireReady = (weaponInfo.currentMagazine > 0 && Time.time - fireTime > fireInterval && !status.isRun) ? true : false;
+        fireReady = (weaponInfo.currentMagazine > 0 && Time.time - fireTime > fireInterval && !status.isRun && !playerUIController.IsPaused) ? true : false;
     }
 
     private void FireWeapon()
