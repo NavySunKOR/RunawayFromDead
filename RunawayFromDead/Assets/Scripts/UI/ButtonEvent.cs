@@ -9,6 +9,8 @@ public class ButtonEvent : MonoBehaviour, IPointerClickHandler
     public int index;
     private PlayerInventory playerInventory;
     private PlayerUIController playerUIController;
+    private float timer;
+    private float interval = 3f;
     public void OnPointerClick(PointerEventData eventData)
     {
         playerInventory = GetComponentInParent<PlayerInventory>();

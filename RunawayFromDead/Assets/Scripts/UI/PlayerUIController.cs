@@ -16,6 +16,7 @@ public class PlayerUIController : MonoBehaviour {
     public GameObject hitPanel;
     public GameObject[] buttons;
     public Text frameText;
+    public RectTransform deleteReticleTr;
 
     private GameManager gameManager;
     private PlayerStats status;
@@ -186,4 +187,13 @@ public class PlayerUIController : MonoBehaviour {
         hitPanel.SetActive(false);
     }
         
+    public void ActiveDeleteReticle(bool value)
+    {
+        deleteReticleTr.gameObject.SetActive(value);
+    }
+    public void SetDeleteReticle(float time,Vector3 pos)
+    {
+        deleteReticleTr.position = pos;
+        deleteReticleTr.GetComponent<Slider>().value = time;
+    }
 }
