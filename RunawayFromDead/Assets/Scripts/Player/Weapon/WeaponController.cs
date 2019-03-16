@@ -108,7 +108,7 @@ public class WeaponController : MonoBehaviour {
         StartCoroutine(OpenFireEffect());
 
         Vector3 randomVector = Random.insideUnitCircle * currentRecoilRadius;
-        Ray ray = new Ray(firePos.position + firePos.forward * 2f + randomVector, firePos.forward);
+        Ray ray = new Ray(firePos.position + firePos.forward * 1f + randomVector, firePos.forward);
         RaycastHit hit;
         if(Physics.Raycast(ray,out  hit, weaponInfo.range))
         {
@@ -138,7 +138,7 @@ public class WeaponController : MonoBehaviour {
         for (int i = 0; i < weaponInfo.GetShotgunPalletCount(); i++)
         {
             Vector3 randomVector = Random.insideUnitCircle * weaponInfo.GetShotgunSpread();
-            Ray ray = new Ray(firePos.position + firePos.forward * 2f + randomVector, firePos.forward);
+            Ray ray = new Ray(firePos.position + firePos.forward * 1f + randomVector, firePos.forward);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, weaponInfo.range))
             {

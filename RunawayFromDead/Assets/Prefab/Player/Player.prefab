@@ -12350,7 +12350,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -12361,7 +12361,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -13292,8 +13292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da456cdd03e56584bb3a2bf4a8595716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upperAngleLimit: 40
-  underAngleLimit: -40
+  upperAngleLimit: 60
+  underAngleLimit: -60
   mouseSensivity: 2
   invertMouseY: 1
   cameraTr: {fileID: 4228270078619396}
