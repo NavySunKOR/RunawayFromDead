@@ -894,7 +894,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4365923308641874}
   - component: {fileID: 108920887861167286}
-  - component: {fileID: 114028204663293876}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -1710,7 +1709,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4051946033871700}
   - component: {fileID: 108820329828474840}
-  - component: {fileID: 114067489216423286}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -2401,7 +2399,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4835641529949464}
   - component: {fileID: 108726641510881022}
-  - component: {fileID: 114248512190478354}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -4425,7 +4422,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4331703735828144}
   - component: {fileID: 108386849588625398}
-  - component: {fileID: 114422796799198876}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -5127,7 +5123,7 @@ GameObject:
   - component: {fileID: 222431312616974606}
   - component: {fileID: 114836426913057672}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13013,7 +13009,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661698664856572}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.98507464, g: 0.65349483, b: 0.43372688, a: 1}
@@ -13050,7 +13046,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1328583331605500}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.98507464, g: 0.65349483, b: 0.43372688, a: 1}
@@ -13087,7 +13083,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262113129289608}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.98507464, g: 0.65349483, b: 0.43372688, a: 1}
@@ -13124,7 +13120,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1144606656471984}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.98507464, g: 0.65349483, b: 0.43372688, a: 1}
@@ -13234,20 +13230,8 @@ MonoBehaviour:
   - {fileID: 1438096323345738, guid: b49172d94667eb1488386dca10ac63a1, type: 2}
   - {fileID: 1731071430059430, guid: 57cc579fd86354a4aadc4944773e2da7, type: 2}
   - {fileID: 1531113314100584, guid: ea6ed4833157cbb4d87d6385683983b2, type: 2}
+  crossHair: {fileID: 1780861249351174}
   frameText: {fileID: 114868017359122810}
-  deleteReticleTr: {fileID: 0}
---- !u!114 &114028204663293876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144606656471984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96d332ab3dbfaaf40bdd9745ff0b19f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0.05
 --- !u!114 &114050943853324362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13313,18 +13297,6 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: e5198250a6a57408bb36e14bc4a322c4, type: 3}
   armAnimator: {fileID: 95118072634754546}
   gunAnimator: {fileID: 95953913311340630}
---- !u!114 &114067489216423286
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262113129289608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96d332ab3dbfaaf40bdd9745ff0b19f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0.05
 --- !u!114 &114092524283690416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13551,18 +13523,6 @@ MonoBehaviour:
   gunAnimation: {fileID: 114066071391476408}
   fireReady: 0
   isHaving: 0
---- !u!114 &114248512190478354
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1328583331605500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96d332ab3dbfaaf40bdd9745ff0b19f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0.05
 --- !u!114 &114255875334358218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13792,18 +13752,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114422796799198876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1661698664856572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96d332ab3dbfaaf40bdd9745ff0b19f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0.05
 --- !u!114 &114435301026028786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14205,7 +14153,7 @@ MonoBehaviour:
     bulletHole: {fileID: 1608315294035542, guid: 6eeec49033a0a00499a13426f84f67cc,
       type: 2}
     damage: 10
-    rpm: 800
+    rpm: 600
     range: 300
     maximumMagazine: 30
     currentMagazine: 30
@@ -16835,12 +16783,12 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1599598152542788}
   serializedVersion: 5
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 2
+  simulationSpeed: 5
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -16960,7 +16908,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.005
+      scalar: 0.001
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -21394,7 +21342,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -25966,7 +25914,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -30538,7 +30486,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -35105,12 +35053,12 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276708636828508}
   serializedVersion: 5
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 2
+  simulationSpeed: 5
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -35230,7 +35178,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.005
+      scalar: 0.001
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -39659,12 +39607,12 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350026908151992}
   serializedVersion: 5
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 2
+  simulationSpeed: 5
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -39784,7 +39732,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.005
+      scalar: 0.001
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -44218,7 +44166,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -49060,7 +49008,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -49113,7 +49061,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -53357,8 +53305,8 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134599006260024}
   serializedVersion: 5
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 2
+  simulationSpeed: 5
   stopAction: 0
   looping: 1
   prewarm: 0
@@ -53482,7 +53430,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.005
+      scalar: 0.001
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -57916,7 +57864,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -58036,7 +57984,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.005
+      scalar: 0.002
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -62488,7 +62436,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -62758,7 +62706,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -62811,7 +62759,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:

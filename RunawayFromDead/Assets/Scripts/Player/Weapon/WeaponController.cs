@@ -8,6 +8,7 @@ public class WeaponController : MonoBehaviour {
     public WeaponAnimation gunAnimation;
     public bool fireReady;
     public bool isHaving;
+    private const float MAX_MUZZLE_INTERVAL = 0.05f;
     private Transform firePos;
     private float currentRecoilRadius;
     private float fireInterval;
@@ -27,7 +28,6 @@ public class WeaponController : MonoBehaviour {
         ammosToReload = 0;
         status = GetComponentInParent<FirstPersonController>();
         playerUIController = GetComponentInParent<PlayerUIController>();
-
     }
 
     private void OnEnable()
@@ -165,7 +165,9 @@ public class WeaponController : MonoBehaviour {
     IEnumerator OpenFireEffect()
     {
         weaponInfo.muzzleFlash.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        if(!weaponInfo.muzzleFlash.GetComponent<ParticleSystem>().isPlaying)
+        weaponInfo.muzzleFlash.GetComponent<ParticleSystem>().Play();
+        yield return new WaitForSeconds(MAX_MUZZLE_INTERVAL);
         weaponInfo.muzzleFlash.SetActive(false);
     }
 

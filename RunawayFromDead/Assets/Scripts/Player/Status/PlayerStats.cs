@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     private void Update () {
-        if(health < 0)
+        if(health <= 0)
         {
             health = 0;
             isAlive = false;

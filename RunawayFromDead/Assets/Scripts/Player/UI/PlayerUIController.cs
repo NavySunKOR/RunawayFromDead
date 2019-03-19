@@ -15,8 +15,8 @@ public class PlayerUIController : MonoBehaviour {
     public GameObject gameClearPanel;
     public GameObject hitPanel;
     public GameObject[] buttons;
+    public GameObject crossHair;
     public Text frameText;
-    public RectTransform deleteReticleTr;
     public bool IsPaused
     {
         get
@@ -38,6 +38,7 @@ public class PlayerUIController : MonoBehaviour {
         playerInventory = GetComponent<PlayerInventory>();
         OnOFFCrossHair();
         isPaused = false;
+        crossHair.SetActive(true);
         Time.timeScale = 1;
     }
 
@@ -179,6 +180,7 @@ public class PlayerUIController : MonoBehaviour {
         isPaused = !isPaused;
         Cursor.lockState = (Cursor.lockState == CursorLockMode.Locked) ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = (Cursor.visible) ? false : true;
+        crossHair.SetActive((!isPaused) ? true : false);
     }
 
     public void RestartGame()
@@ -196,15 +198,5 @@ public class PlayerUIController : MonoBehaviour {
         hitPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         hitPanel.SetActive(false);
-    }
-        
-    public void ActiveDeleteReticle(bool value)
-    {
-        deleteReticleTr.gameObject.SetActive(value);
-    }
-    public void SetDeleteReticle(float time,Vector3 pos)
-    {
-        deleteReticleTr.position = pos;
-        deleteReticleTr.GetComponent<Slider>().value = time;
     }
 }
